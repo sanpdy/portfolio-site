@@ -51,7 +51,7 @@ export const projectList = [
     logo: '/logos/visionflow.png',
   },
   {
-    name: 'San Francisco Crime Classification',
+    name: 'SFPD Crime Classification',
     shortDescription: 'Classifying crime incidents from SFPD data',
     year: '2024',
     description: 'Engineered spatio-temporal features from 800K+ SFPD crime reports to classify incidents across 39 categories. Trained a CatBoost model with stratified 5-fold validation achieving weighted F1 score of 0.2505, ranking top 7% on Kaggle leaderboard.',

@@ -48,7 +48,9 @@ export default function Projects() {
 
                         <div className="min-w-0">
                           <div className="flex items-center gap-2">
-                            <span className="text-white text-lg truncate">{project.name}</span>
+                          <span className="text-base sm:text-lg md:text-lg lg:text-lg flex-shrink-0">
+  {project.name}
+</span>
                             {project.shortDescription && (
                               <span className="text-gray-400 text-base truncate">{project.shortDescription}</span>
                             )}
