@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { useState } from 'react';
 import { projectList } from '../constants/data';
 
@@ -34,7 +34,7 @@ export default function Projects() {
                         {/* Logo container */}
                         <div className="w-9 h-9 rounded-full overflow-hidden bg-[#181818] flex items-center justify-center flex-shrink-0">
                           {project.logo ? (
-                            <img
+                            <Image
                               src={project.logo}
                               alt={`${project.name} logo`}
                               className="w-full h-full object-cover"

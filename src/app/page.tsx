@@ -4,8 +4,8 @@ import About      from '../components/About';
 import Work       from '../components/Work';
 import Projects   from '../components/Projects';
 import Steam from '../components/Steam';
-import ResearchDigest from '../components/ResearchDigest';
-import Strava from '../components/Strava'
+//import ResearchDigest from '../components/ResearchDigest';
+//import Strava from '../components/Strava'
 
 export default function HomePage() {
   return (

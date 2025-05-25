@@ -1,6 +1,6 @@
 // src/components/Strava.tsx
 'use client';
-
+/*
 import { useState, useEffect } from 'react';
 
 interface Activity {
@@ -35,7 +35,7 @@ export default function Strava({ perPage = 10 }: { perPage?: number }) {
         } else {
           setActivities(data.activities || []); 
         }
-      } catch (e: any) {
+      } catch (e: ) {
         setError(e.message);
       } finally {
         setLoading(false);
@@ -84,3 +84,4 @@ export default function Strava({ perPage = 10 }: { perPage?: number }) {
     </section>
   );
 }
+*/

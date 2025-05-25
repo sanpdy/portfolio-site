@@ -1,10 +1,12 @@
+import Link from 'next/link'
+
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(11,11,11,0.7)] backdrop-blur-md text-white">
       <div className="container mx-auto px-4 h-24 flex items-baseline justify-between">
-        <a href="/" className="text-5xl font-geo font-bold pt-8">
+        <Link href="/" className="text-5xl font-geo font-bold pt-8">
           Sankalp Pandey
-        </a>
+        </Link>
         <div className="flex space-x-6">
           <a
             href="https://linkedin.com/in/sanpdy"

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { workHistory } from '../constants/data';
+import Image from 'next/image';
 
 export default function Work() {
   const [expanded, setExpanded] = useState<number[]>([]);
@@ -41,7 +42,7 @@ export default function Work() {
                     <div className="flex items-center">
                       <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#181818] mr-4 text-2xl">
                         {job.logo ? (
-                          <img src={job.logo} alt={job.company} className="w-7 h-7 object-contain" />
+                          <Image src={job.logo} alt={job.company} className="w-7 h-7 object-contain" />
                         ) : (
                           <span>{job.company?.[0] || '?'}</span>
                         )}

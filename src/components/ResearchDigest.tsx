@@ -16,7 +16,7 @@ export default function ResearchDigest() {
     <section id="research-digest" className="section">
       <div className="container">
         <h2 className="section-header mb-6">
-          Cool Research Papers
+          Cool
         </h2>
         <div className="mt-4">
           {researchDigest.map(({ id, title, tldr, whyItMatters, pdfLink, visualsLink }, idx) => {

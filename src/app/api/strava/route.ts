@@ -16,10 +16,12 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // Build query params, excluding our internal “endpoint” key
+  // Build query params, excluding our internal "endpoint" key
   const params: Record<string, string> = {};
   searchParams.forEach((value, key) => {
-    if (key !== 'endpoint') params[key] = value;
+    if (key !== 'endpoint') {
+      params[key] = value;
+    }
   });
 
   const qs = new URLSearchParams(params);
@@ -39,10 +41,10 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const contentType = stravaRes.headers.get('content-type') || '';
+    const contentType = stravaRes.headers.get('content-type') ?? '';
     if (!contentType.includes('application/json')) {
       const text = await stravaRes.text();
-      console.error('Non-JSON from Strava:', text.slice(0,200));
+      console.error('Non-JSON from Strava:', text.slice(0, 200));
       return NextResponse.json(
         { error: 'Invalid response format from Strava' },
         { status: 500 }
@@ -51,10 +53,11 @@ export async function GET(request: NextRequest) {
 
     const data = await stravaRes.json();
     return NextResponse.json(data);
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('Strava fetch failed:', err);
+    const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { error: err.message || 'Strava API request failed' },
+      { error: message || 'Strava API request failed' },
       { status: 500 }
     );
   }

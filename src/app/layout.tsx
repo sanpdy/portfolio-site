@@ -20,8 +20,12 @@ const geo = Geo({
 });
 
 export const metadata: Metadata = {
-  title: "Sankalp Pandey Portfolio",
+  title: "Sankalp Pandey",
   description: "Portfolio website of Sankalp Pandey",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
