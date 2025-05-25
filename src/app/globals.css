@@ -3,19 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: rgb(11, 11, 11);
+  --foreground: #ededed;
+  --accent: #3b82f6;
+  --muted: #9ca3af;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
 }
+
+.font-geo {
+  font-family: var(--font-geo), serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.section-header {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: .05rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.card {
+  background: var(--background);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
