@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(11,11,11,0.7)] backdrop-blur-md text-white">
-      <div className="container mx-auto px-4 h-20 flex items-end justify-between pb-1">
+      <div className="container mx-auto px-4 h-20 flex items-end justify-between pb-4">
         <Link href="/" className="text-4xl font-geo font-bold pb-1">
           Sankalp Pandey
         </Link>
@@ -12,7 +12,7 @@ export default function Navbar() {
             href="https://linkedin.com/in/sanpdy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors pb-0.5"
+            className="text-gray-400 hover:text-white transition-colors pb-2"
             aria-label="LinkedIn"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -23,7 +23,7 @@ export default function Navbar() {
             href="https://github.com/sanpdy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors pb-0.5"
+            className="text-gray-400 hover:text-white transition-colors pb-2"
             aria-label="GitHub"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -32,7 +32,7 @@ export default function Navbar() {
           </a>
           <a
             href="mailto:sankalpp@uark.edu"
-            className="text-gray-400 hover:text-white transition-colors pb-0.5"
+            className="text-gray-400 hover:text-white transition-colors pb-2"
             aria-label="Email"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
