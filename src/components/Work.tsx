@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { workHistory } from '../constants/data';
+import Image from 'next/image';
 
 export default function Work() {
   const [expanded, setExpanded] = useState<number[]>([]);
@@ -51,7 +52,7 @@ export default function Work() {
                     <div className="flex items-center">
                     <div className="pl-4">
   {job.logo ? (
-    <img
+    <Image
       src={job.logo}
       alt={job.company + ' logo'}
       width={24}

@@ -118,7 +118,7 @@ export default function Steam({ steamId }: { steamId: string }) {
                   key={game.appid}
                   className="bg-[#111] border border-dashed border-zinc-800 rounded-lg p-4 hover:shadow-lg transition-shadow flex items-center gap-4"
                 >
-                  <img
+                  <Image
                     src={`https://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`}
                     alt={`${game.name} icon`}
                     className="w-10 h-10 rounded-sm"

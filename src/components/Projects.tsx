@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { projectList } from '../constants/data';
+import Image from 'next/image';
 
 export default function Projects() {
   const [expanded, setExpanded] = useState<number[]>([]);
@@ -32,7 +33,7 @@ export default function Projects() {
                 {/* Logo (as circle) */}
                 <div className="pl-4 flex items-center">
                   {project.logo ? (
-                    <img
+                    <Image
                       src={project.logo}
                       alt={project.name + ' logo'}
                       width={24}
