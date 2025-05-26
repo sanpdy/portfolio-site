@@ -105,7 +105,7 @@ export default function Steam({ steamId }: { steamId: string }) {
       <div className="container">
         {/* Recent Games */}
         <div>
-          <h3 className="text-white text-lg mb-4 pb-2 border-b border-dashed border-gray-700">
+          <h3 className="text-white text-lg mb-4 pb-2 border-b border-dashed border-zinc-800">
             Recent Games
           </h3>
 
@@ -116,7 +116,7 @@ export default function Steam({ steamId }: { steamId: string }) {
               {recentGames.map((game) => (
                 <div
                   key={game.appid}
-                  className="bg-[#111] border border-dashed border-gray-700 rounded-lg p-4 hover:shadow-lg transition-shadow flex items-center gap-4"
+                  className="bg-[#111] border border-dashed border-zinc-800 rounded-lg p-4 hover:shadow-lg transition-shadow flex items-center gap-4"
                 >
                   <Image
                     src={`https://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`}
