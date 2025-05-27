@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: rgb(11, 11, 11);
+  --background: rgb(10, 10, 10);
   --foreground: #ededed;
   --accent: #3b82f6;
   --muted: #9ca3af;
 }
+
 
 body {
   color: var(--foreground);
