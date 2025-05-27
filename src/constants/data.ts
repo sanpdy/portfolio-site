@@ -131,3 +131,41 @@ export const researchDigest: ResearchPaper[] = [
   },
 ];
 
+
+export const FAVORITE_GAMES = [
+  {
+    appid: 1086940,
+    name: "Baldur's Gate 3",
+    blurb: "Honor mode run will be complete.",
+  },
+  {
+    appid: 1245620,
+    name: "Elden Ring",
+    blurb: "Beautiful, had to 100% it.",
+  },
+  {
+    appid: 105600,
+    name: "Terraria",
+    blurb: "Dig, build, fight eldritch monster, repeat.",
+  },
+  {
+    appid: 289070,
+    name: "Sid Meier's Civilization VI",
+    blurb: "One more turn.",
+  },
+  {
+    appid: 1174180,
+    name: "Red Dead Redemption 2",
+    blurb: "Hey there, Mister!",
+  },
+ {
+    appid: 2215430,
+    name: "Ghost of Tsushima",
+    blurb: "You have no honor. And you are a slave to it.",
+ },
+  {
+    appid: 814380,
+    name: "Sekiro: Shadows Die Twice",
+    blurb: "Hesitation is Defeat.",
+ },
+];
