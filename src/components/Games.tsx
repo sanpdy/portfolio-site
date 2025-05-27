@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import { FAVORITE_GAMES } from "../constants/data";
-
+/* eslint-disable @next/next/no-img-element */
 
 export default function Games() {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -24,7 +23,7 @@ export default function Games() {
               style={{ width: 200, height: 94 }}
             >
               {/* Game Header Image */}
-              <Image
+              <img
                 src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${game.appid}/header.jpg`}
                 alt={game.name}
                 className="w-full h-full rounded-lg border border-zinc-800/60 shadow-md object-cover transition-all duration-200 group-hover:shadow-xl group-hover:border-zinc-700"
