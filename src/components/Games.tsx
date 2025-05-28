@@ -13,7 +13,7 @@ export default function Games() {
           <h2 className="section-header mb-0">Favorite Games</h2>
         </div>
 
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+        <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
           {FAVORITE_GAMES.map((game) => (
             <div
               key={game.appid}
