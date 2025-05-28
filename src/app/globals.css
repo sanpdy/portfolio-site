@@ -73,3 +73,24 @@ body {
   opacity: 0.8;
 }
 
+.custom-scrollbar {
+  scrollbar-width: thin;                /* Firefox */
+  scrollbar-color: #27272a #18181b;     /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  background: #18181b;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #27272a 70%, #52525b 100%);
+  border-radius: 8px;
+  border: 2px solid #18181b;
+  transition: background 0.3s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #3f3f46 60%, #71717a 100%);
+}
