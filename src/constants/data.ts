@@ -11,13 +11,13 @@ export const workHistory = [
     technologies: ['Python', 'Azure OpenAI', 'Machine Learning', 'Document Parsing', 'CatBoost', 'Pandas', 'Matplotlib', 'Laravel', 'PostgreSQL'],
   },
   {
-    company: 'University of Arkansas CVIU Lab',
+    company: 'University of Arkansas',
     position: 'Research Assistant',
     logo: '/logos/uark-modified.png',
     period: '2024 - Present',
     location: 'Fayetteville, AR',
     description:
-      'Co-authored a physics-informed domain adaptation network (NeurIPS 2025 submission) for aligning synthetic and real 2D material images. Created a synthetic dataset of 600K microscopy images across eight materials and 40 layer types. Improved thickness estimation error by 9.1 nm and detection precision by 30%. Achieved state-of-the-art flake layer classification accuracy of 93.9%.',
+      'Researching under the mentorship of Dr. Khoa Luu as part of the Computer Vision and Image Understanding Lab. Co-authored a physics-informed domain adaptation network (NeurIPS 2025 submission) for aligning synthetic and real 2D material images. Created a synthetic dataset of 600K microscopy images across eight materials and 40 layer types. Improved thickness estimation error by 9.1 nm and detection precision by 30%. Achieved state-of-the-art flake layer classification accuracy of 93.9%.',
     technologies: ['Python', 'Deep Learning', 'Computer Vision', 'Domain Adaptation', 'Dataset Creation', 'Computational Neuroscience', 'Vision Transformer', 'Variational Autoencoder', 'PyTorch'],
   },
 ];
