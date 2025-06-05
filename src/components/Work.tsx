@@ -47,7 +47,7 @@ export default function Work() {
                   );
                 }}
               >
-                <div className={`border-b border-dashed border-zinc-800 ${idx === 0 ? 'border-t' : ''}`}>
+                <div className={`border-b rounded-lg border-dashed border-zinc-800 ${idx === 0 ? 'border-t' : ''}`}>
                   <div className="py-2">
                     <div className="flex items-center">
                     <div className="pl-4">
