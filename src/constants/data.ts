@@ -82,54 +82,38 @@ export const projectList = [
 export interface ResearchPaper {
   id: number;
   title: string;
-  tldr: string;
-  whyItMatters: string;
+  authors: string;
+  year: number;
+  summary: string;
   pdfLink: string;
-  visualsLink?: string | null;
+  arxivLink: string;
 }
 
-export const researchDigest: ResearchPaper[] = [
+export const publications: ResearchPaper[] = [
   {
     id: 1,
-    title: 'Zebrafish Activity Prediction Benchmark (ZAPBench)',
-    tldr: 'ZAPBench introduces a forecasting benchmark based on a 4D light-sheet microscopy recording of over 70,000 whole-brain neural activity traces in larval zebrafish, enabling evaluation of models predicting future activity from past signals.',
-    whyItMatters: 'Provides a unique vertebrate-scale dataset and benchmark to drive development of more accurate and generalizable whole-brain activity prediction models.',
-    pdfLink: 'https://openreview.net/pdf?id=oCHsDpyawq',
-    visualsLink: 'https://zapbench-release.storage.googleapis.com/landing.html',
+    title: "QMoE: A Quantum Mixture of Experts Framework for Scalable Quantum Neural Networks",
+    authors: "HQ Nguyen, XB Nguyen, S Pandey, SU Khan, I Safro, K Luu",
+    year: 2025,
+    summary:
+      "Introduces QMoE, a scalable quantum neural network using multiple quantum experts and a learnable quantum router to improve classification performance over standard QNNs.",
+    pdfLink: "https://arxiv.org/pdf/2507.05190",
+    arxivLink: "https://arxiv.org/abs/2507.05190",
   },
   {
     id: 2,
-    title: 'Revisiting Your Memory: Reconstruction of Affect-Contextualized Memory via EEG-guided Audiovisual Generation',
-    tldr: 'Introduces RecallAffectiveMemory, a novel task and dataset for reconstructing autobiographical memories through audio-visual generation guided by affect derived from EEG recordings, and proposes the RYM framework for synchronized generation.',
-    whyItMatters: 'Advances affective computing by enabling personalized media creation driven by neural affect trajectories, opening applications in memory augmentation and neuro-driven content synthesis.',
-    pdfLink: 'https://arxiv.org/pdf/2412.05296.pdf',
-    visualsLink: null,
-  },
-  {
-    id: 3,
-    title: 'Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI',
-    tldr: 'Proposes Large EEG Models (LEMs) using unsupervised pre-training on diverse EEG datasets to learn universal signal representations, overcoming dataset-specific limitations and enabling fine-tuning for various BCI tasks.',
-    whyItMatters: 'Brings the success of large-scale pre-trained models to EEG signal processing, promising more robust and generalizable BCI models across tasks.',
-    pdfLink: 'https://arxiv.org/pdf/2405.18765.pdf',
-    visualsLink: null,
-  },
-  {
-    id: 4,
-    title: 'MaskTerial: A Foundation Model for Automated 2D Material Flake Detection',
-    tldr: 'Presents MaskTerial, an instance segmentation model pre-trained on synthetic microscopy images to accurately detect 2D material flakes with few-shot adaptation and uncertainty estimation.',
-    whyItMatters: 'Automates and improves the accuracy of materials science imaging workflows, facilitating large-scale data collection and discovery of novel 2D materials.',
-    pdfLink: 'https://arxiv.org/pdf/2412.09333.pdf',
-    visualsLink: null,
-  },
-  {
-    id: 5,
-    title: 'NeuroClips: Towards High-fidelity and Smooth fMRI-to-Video Reconstruction',
-    tldr: 'Introduces NeuroClips, a framework combining semantic and perception reconstructor modules with diffusion models to reconstruct smooth, high-fidelity videos from fMRI data, achieving significant improvements in SSIM and spatiotemporal metrics.',
-    whyItMatters: 'Pushes the frontier of decoding continuous visual experiences from brain signals, enabling realistic video reconstruction for neuroscience and brain-computer interfaces.',
-    pdfLink: 'https://arxiv.org/pdf/2410.19452.pdf',
-    visualsLink: 'https://github.com/gongzix/NeuroClips',
+    title:
+      "φ-Adapt: A Physics-Informed Adaptation Learning Approach to 2D Quantum Material Discovery",
+    authors:
+      "HQ Nguyen, XB Nguyen, S Pandey, T Faltermeier, N Borys, H Churchill, K Luu",
+    year: 2025,
+    summary:
+      "Proposes Φ-Adapt, a physics-informed framework for discovering novel 2D quantum materials, combining adaptation learning with domain-specific quantum constraints.",
+    pdfLink: "https://arxiv.org/pdf/2507.05184",
+    arxivLink: "https://arxiv.org/abs/2507.05184"
   },
 ];
+
 
 
 export const FAVORITE_GAMES = [
