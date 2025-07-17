@@ -7,7 +7,7 @@ import Projects   from '../components/Projects';
 //import Games from '../components/Games';
 import Footer     from '../components/Footer';
 import Skills    from '../components/Skills';
-//import ResearchDigest from '../components/ResearchDigest';
+import Publications from '../components/Publications';
 //import Strava from '../components/Strava'
 import Education from '../components/Education';
 
@@ -17,8 +17,9 @@ export default function HomePage() {
       <Navbar />
       <main className="pt-16">
         <About />
-        <Work />
+        <Publications />
         <Skills />
+        <Work />
         <Projects />
         <Education />
         <Footer/>
