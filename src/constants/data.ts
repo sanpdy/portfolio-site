@@ -1,16 +1,6 @@
 // src/constants/data.ts
 export const workHistory = [
   {
-    company: 'Hidalga Technologies',
-    position: 'Software Engineering Intern',
-    logo: '/logos/hidalga.png',
-    period: '2024 - Present',
-    location: 'Springdale, AR',
-    description:
-      'Developed a gradient boosting model with 87.6% accuracy on 30K+ cases to predict prior authorization outcomes, reducing human reviews by ≈30%. Piloted an automated document parsing and validation system using Azure OpenAI, tested on 250+ forms and reducing turnaround time by ~60%.',
-    technologies: ['Python', 'Azure OpenAI', 'Machine Learning', 'Document Parsing', 'CatBoost', 'Pandas', 'Matplotlib', 'Laravel', 'PostgreSQL'],
-  },
-  {
     company: 'University of Arkansas',
     position: 'Research Assistant',
     logo: '/logos/uark-modified.png',
@@ -19,6 +9,16 @@ export const workHistory = [
     description:
       'Researching under the mentorship of Dr. Khoa Luu as part of the Computer Vision and Image Understanding Lab. Co-authored a physics-informed domain adaptation network (NeurIPS 2025 submission) for aligning synthetic and real 2D material images. Created a synthetic dataset of 600K microscopy images across eight materials and 40 layer types. Improved thickness estimation error by 9.1 nm and detection precision by 30%. Achieved state-of-the-art flake layer classification accuracy of 93.9%.',
     technologies: ['Python', 'Deep Learning', 'Computer Vision', 'Domain Adaptation', 'Dataset Creation', 'Computational Neuroscience', 'Vision Transformer', 'Variational Autoencoder', 'PyTorch'],
+  },
+  {
+    company: 'Hidalga Technologies',
+    position: 'Software Engineering Intern',
+    logo: '/logos/hidalga.png',
+    period: '2024 - 2025',
+    location: 'Springdale, AR',
+    description:
+      'Developed a gradient boosting model with 87.6% accuracy on 30K+ cases to predict prior authorization outcomes, reducing human reviews by ≈30%. Piloted an automated document parsing and validation system using Azure OpenAI, tested on 250+ forms and reducing turnaround time by ~60%.',
+    technologies: ['Python', 'Azure OpenAI', 'Machine Learning', 'Document Parsing', 'CatBoost', 'Pandas', 'Matplotlib', 'Laravel', 'PostgreSQL'],
   },
 ];
 
