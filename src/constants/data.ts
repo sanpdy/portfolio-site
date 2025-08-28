@@ -82,35 +82,73 @@ export const projectList = [
 export interface ResearchPaper {
   id: number;
   title: string;
-  authors: string;
+  authors: Array<{ name: string; me?: boolean }>;
   year: number;
   summary: string;
   pdfLink: string;
   arxivLink: string;
+  status?: 'Published' | 'Under Review';
+  conference?: string;
 }
 
 export const publications: ResearchPaper[] = [
   {
     id: 1,
+    title: "CLIFF: Continual Learning for Incremental Flake Features in 2D Material Identification",
+    authors: [
+      { name: "S Pandey", me: true },
+      { name: "XB Nguyen" },
+      { name: "N Borys" },
+      { name: "H Churchill" },
+      { name: "K Luu" },
+    ],
+    year: 2025,
+    summary:
+      "Presents CLIFF, a continual-learning framework for automated 2D flake layer classification that leverages material-specific prompts, embeddings, and delta heads with memory replay to reduce forgetting and improve accuracy across materials.",
+    pdfLink: "https://arxiv.org/pdf/2508.17261",
+    arxivLink: "https://arxiv.org/abs/2508.17261",
+    status: "Under Review",
+    conference: "NeurIPS 2025 Workshop on AI for Accelerated Materials Discovery (AI4Mat)",
+  },
+  {
+    id: 2,
     title: "QMoE: A Quantum Mixture of Experts Framework for Scalable Quantum Neural Networks",
-    authors: "HQ Nguyen, XB Nguyen, S Pandey, SU Khan, I Safro, K Luu",
+    authors: [
+      { name: "HQ Nguyen" },
+      { name: "XB Nguyen" },
+      { name: "S Pandey", me: true },
+      { name: "SU Khan" },
+      { name: "I Safro" },
+      { name: "K Luu" },
+    ],
     year: 2025,
     summary:
       "Introduces QMoE, a scalable quantum neural network using multiple quantum experts and a learnable quantum router to improve classification performance over standard QNNs.",
     pdfLink: "https://arxiv.org/pdf/2507.05190",
     arxivLink: "https://arxiv.org/abs/2507.05190",
+    status: "Published",
+    conference: "IEEE Quantum Week International Workshop on Quantum Computing and Reinforcement Learning (QCRL)",
   },
   {
-    id: 2,
+    id: 3,
     title:
       "φ-Adapt: A Physics-Informed Adaptation Learning Approach to 2D Quantum Material Discovery",
-    authors:
-      "HQ Nguyen, XB Nguyen, S Pandey, T Faltermeier, N Borys, H Churchill, K Luu",
+    authors: [
+      { name: "HQ Nguyen" },
+      { name: "XB Nguyen" },
+      { name: "S Pandey", me: true },
+      { name: "T Faltermeier" },
+      { name: "N Borys" },
+      { name: "H Churchill" },
+      { name: "K Luu" },
+    ],
     year: 2025,
     summary:
       "Proposes Φ-Adapt, a physics-informed framework for discovering novel 2D quantum materials, combining adaptation learning with domain-specific quantum constraints.",
     pdfLink: "https://arxiv.org/pdf/2507.05184",
-    arxivLink: "https://arxiv.org/abs/2507.05184"
+    arxivLink: "https://arxiv.org/abs/2507.05184",
+    status: "Under Review",
+    conference: "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
   },
 ];
 

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { publications } from "../constants/data";
 
+type Status = "Published" | "Under Review";
+
 // Icon for PDF
 function FileTextIcon() {
   return (
@@ -25,7 +27,7 @@ function FileTextIcon() {
   );
 }
 
-// Icon for arXiv (library-style)
+// Icon for arXiv
 function LibraryIcon() {
   return (
     <svg
@@ -45,88 +47,159 @@ function LibraryIcon() {
   );
 }
 
+function StatusBadge({ status }: { status?: Status }) {
+  if (!status) return null;
+  const isPublished = status === "Published";
+  const base =
+    "text-xs px-2 py-0.5 rounded-full border inline-flex items-center gap-1 whitespace-nowrap";
+  const cls = isPublished
+    ? "border-emerald-500/40 text-emerald-300"
+    : "border-amber-500/40 text-amber-300";
+  const dot = (
+    <span
+      className={`inline-block w-1.5 h-1.5 rounded-full ${
+        isPublished ? "bg-emerald-400" : "bg-amber-400"
+      }`}
+    />
+  );
+  return (
+    <span className={`${base} ${cls}`}>
+      {dot}
+      {status}
+    </span>
+  );
+}
+
 export default function PublicationsList() {
   const [expanded, setExpanded] = useState<number[]>([]);
 
   return (
     <section id="publications" className="section">
       <div className="container">
-        <h2 className="section-header mb-0">Publications</h2>
+        <h2 className="section-header mb-0 text-gray-200">Publications</h2>
 
-        <div className="mt-2">
-          {publications.map(({ id, title, authors, year, summary, pdfLink, arxivLink }, idx) => {
-            const isOpen = expanded.includes(idx);
+        <div className="mt-2 space-y-2">
+          {publications.map(
+            (
+              {
+                id,
+                title,
+                authors,
+                year,
+                summary,
+                pdfLink,
+                arxivLink,
+                status,
+                conference,
+              },
+              idx
+            ) => {
+              const isOpen = expanded.includes(idx);
 
-            return (
-              <div
-                key={id}
-                className="cursor-pointer group transition-all duration-200 hover:bg-zinc-800 hover:shadow rounded-lg"
-                onClick={() => {
-                  setExpanded(prev =>
-                    prev.includes(idx)
-                      ? prev.filter(i => i !== idx)
-                      : [...prev, idx]
-                  );
-                }}
-              >
-                <div className={`border-b rounded-lg border-dashed border-zinc-800 ${idx === 0 ? 'border-t' : ''}`}>
-                  <div className="py-2">
-                    <div className="flex items-center">
-                      {/* Title and Authors */}
-                      <div className="flex flex-col flex-1 pl-4">
-                        <h3 className="text-md sm:text-base font-normal text-foreground truncate">{title}</h3>
-                        <span className="text-sm font-normal text-gray-400 truncate">{authors}</span>
+              return (
+                <div
+                  key={id}
+                  className="cursor-pointer group transition-all duration-200 hover:bg-zinc-800 hover:shadow rounded-lg"
+                  onClick={() => {
+                    setExpanded((prev) =>
+                      prev.includes(idx)
+                        ? prev.filter((i) => i !== idx)
+                        : [...prev, idx]
+                    );
+                  }}
+                >
+                  <div
+                    className={`border-b rounded-lg border-dashed border-zinc-800 ${
+                      idx === 0 ? "border-t" : ""
+                    }`}
+                  >
+                    <div className="py-3 px-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                        {/* Title + Meta */}
+                        <div className="flex flex-col gap-1">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <h3 className="text-md sm:text-base font-semibold text-gray-200">
+                              {title}
+                            </h3>
+                            <StatusBadge status={status as Status} />
+                          </div>
+
+                          {/* Conference under status */}
+                          {conference && (
+                            <span className="text-s italic text-gray-200">
+                              {conference}
+                            </span>
+                          )}
+
+                          <span className="text-sm font-normal text-gray-200">
+                            {authors.map((a, i) => (
+                              <span key={i}>
+                                {a.me ? (
+                                  <span className="underline font-semibold">
+                                    {a.name}
+                                  </span>
+                                ) : (
+                                  a.name
+                                )}
+                                {i < authors.length - 1 && ", "}
+                              </span>
+                            ))}
+                          </span>
+                        </div>
+
+                        {/* Year */}
+                        <span className="text-gray-200 text-sm shrink-0">
+                          {year}
+                        </span>
                       </div>
-                      {/* Year */}
-                      <span className="text-gray-400 text-sm whitespace-nowrap pr-4">{year}</span>
-                    </div>
 
-                    {/* Animated dropdown */}
-                    <div
-                      className={`
-                        transition-all duration-300 ease-in-out overflow-hidden
-                        ${isOpen ? 'max-h-[1000px]' : 'max-h-0'}
-                      `}
-                    >
+                      {/* Animated dropdown */}
                       <div
                         className={`
-                          transition-opacity duration-300 ease-in-out
-                          ${isOpen ? 'opacity-100' : 'opacity-0'}
-                          pl-4
+                          transition-all duration-300 ease-in-out overflow-hidden
+                          ${isOpen ? "max-h-[1000px]" : "max-h-0"}
                         `}
                       >
-                        <div className="mb-2 text-white">{summary}</div>
-                        <div className="flex flex-wrap gap-2">
-                          {pdfLink && (
-                            <a
-                              href={pdfLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="bg-[#232323] text-gray-200 px-3 py-1 rounded-md text-xs font-medium hover:bg-[#333] transition-colors duration-300 flex items-center"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <FileTextIcon /> PDF
-                            </a>
-                          )}
-                          {arxivLink && (
-                            <a
-                              href={arxivLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="bg-[#232323] text-gray-200 px-3 py-1 rounded-md text-xs font-medium hover:bg-[#333] transition-colors duration-300 flex items-center"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <LibraryIcon /> arXiv
-                            </a>
-                          )}
+                        <div
+                          className={`
+                            transition-opacity duration-300 ease-in-out
+                            ${isOpen ? "opacity-100" : "opacity-0"}
+                            pt-3
+                          `}
+                        >
+                          <div className="mb-2 text-gray-200">{summary}</div>
+                          <div className="flex flex-wrap gap-2">
+                            {pdfLink && (
+                              <a
+                                href={pdfLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#232323] text-gray-200 px-3 py-1 rounded-md text-xs font-medium hover:bg-[#333] transition-colors duration-300 flex items-center"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <FileTextIcon /> PDF
+                              </a>
+                            )}
+                            {arxivLink && (
+                              <a
+                                href={arxivLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#232323] text-gray-200 px-3 py-1 rounded-md text-xs font-medium hover:bg-[#333] transition-colors duration-300 flex items-center"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <LibraryIcon /> arXiv
+                              </a>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            }
+          )}
         </div>
       </div>
     </section>
