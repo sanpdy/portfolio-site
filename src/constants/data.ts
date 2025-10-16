@@ -87,7 +87,7 @@ export interface ResearchPaper {
   summary: string;
   pdfLink: string;
   arxivLink: string;
-  status?: 'Published' | 'Under Review';
+  status?: 'Published' | 'Under Review' | 'Accepted';
   conference?: string;
 }
 
@@ -107,8 +107,8 @@ export const publications: ResearchPaper[] = [
       "Presents CLIFF, a continual-learning framework for automated 2D flake layer classification that leverages material-specific prompts, embeddings, and delta heads with memory replay to reduce forgetting and improve accuracy across materials.",
     pdfLink: "https://arxiv.org/pdf/2508.17261",
     arxivLink: "https://arxiv.org/abs/2508.17261",
-    status: "Under Review",
-    conference: "NeurIPS 2025 Workshop on AI for Accelerated Materials Discovery (AI4Mat)",
+    status: "Accepted",
+    conference: "NeurIPS 2025 Workshop",
   },
   {
     id: 2,
@@ -126,8 +126,8 @@ export const publications: ResearchPaper[] = [
       "Introduces QMoE, a scalable quantum neural network using multiple quantum experts and a learnable quantum router to improve classification performance over standard QNNs.",
     pdfLink: "https://arxiv.org/pdf/2507.05190",
     arxivLink: "https://arxiv.org/abs/2507.05190",
-    status: "Published",
-    conference: "IEEE Quantum Week International Workshop on Quantum Computing and Reinforcement Learning (QCRL)",
+    status: "Accepted",
+    conference: "IEEE Quantum Week Workshop",
   },
   {
     id: 3,

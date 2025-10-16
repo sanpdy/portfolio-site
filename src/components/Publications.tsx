@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { publications } from "../constants/data";
 
-type Status = "Published" | "Under Review";
+type Status = "Published" | "Under Review" | "Accepted";
 
 // Icon for PDF
 function FileTextIcon() {
@@ -49,7 +49,7 @@ function LibraryIcon() {
 
 function StatusBadge({ status }: { status?: Status }) {
   if (!status) return null;
-  const isPublished = status === "Published";
+  const isPublished = status === "Published" || status == "Accepted";
   const base =
     "text-xs px-2 py-0.5 rounded-full border inline-flex items-center gap-1 whitespace-nowrap";
   const cls = isPublished
