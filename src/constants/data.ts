@@ -92,8 +92,45 @@ export interface ResearchPaper {
 }
 
 export const publications: ResearchPaper[] = [
-  {
+    {
     id: 1,
+    title: "TIMBRE: Time-aware Multimodal Vision-Brain Encoding",
+    authors: [
+      { name: "XB Nguyen" },
+      { name: "S Pandey", me: true },
+      { name: "S Kim" },
+      { name: "H Jang" },
+      { name: "AK Choudhary" },
+      { name: "K Luu" },
+    ],
+    year: 2025,
+    summary:"",
+    pdfLink: "",
+    arxivLink: "",
+    status: "Under Review",
+    conference: "CVPR 2026",
+  },
+    {
+    id: 2,
+    title: "QuPAINT: Physics-Aware Instruction Tuning Approach to Quantum Material Discovery",
+    authors: [
+      { name: "XB Nguyen" },
+      { name: "HQ Nguyen" },
+      { name: "S Pandey", me: true },
+      { name: "T Faltermeier" },
+      { name: "N Borys" },
+      { name: "H Churchill" },
+      { name: "K Luu" },
+    ],
+    year: 2025,
+    summary:"",
+    pdfLink: "",
+    arxivLink: "",
+    status: "Under Review",
+    conference: "CVPR 2026",
+  },
+  {
+    id: 3,
     title: "CLIFF: Continual Learning for Incremental Flake Features in 2D Material Identification",
     authors: [
       { name: "S Pandey", me: true },
@@ -111,7 +148,7 @@ export const publications: ResearchPaper[] = [
     conference: "NeurIPS 2025 Workshop",
   },
   {
-    id: 2,
+    id: 4,
     title: "QMoE: A Quantum Mixture of Experts Framework for Scalable Quantum Neural Networks",
     authors: [
       { name: "HQ Nguyen" },
@@ -130,7 +167,7 @@ export const publications: ResearchPaper[] = [
     conference: "IEEE Quantum Week Workshop",
   },
   {
-    id: 3,
+    id: 5,
     title:
       "φ-Adapt: A Physics-Informed Adaptation Learning Approach to 2D Quantum Material Discovery",
     authors: [
@@ -151,7 +188,6 @@ export const publications: ResearchPaper[] = [
     conference: "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
   },
 ];
-
 
 
 export const FAVORITE_GAMES = [
@@ -180,14 +216,14 @@ export const FAVORITE_GAMES = [
     name: "Red Dead Redemption 2",
     blurb: "Hey there, Mister!",
   },
- {
+  {
     appid: 2215430,
     name: "Ghost of Tsushima",
     blurb: "You have no honor. And you are a slave to it.",
- },
+  },
   {
     appid: 814380,
     name: "Sekiro: Shadows Die Twice",
     blurb: "Hesitation is Defeat.",
- },
+  },
 ];
