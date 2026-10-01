@@ -341,3 +341,24 @@ header,
     color: inherit !important;
   }
 }
+
+/* Animated flow-field background (flow-bg.js) */
+html { background: var(--color-surface); }
+.flow-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  /* keep the centre text column nearly clear; the pattern lives at the edges */
+  -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0.28) 28%, rgba(0,0,0,0.28) 72%, #000 100%);
+  mask-image: linear-gradient(to right, #000 0%, rgba(0,0,0,0.28) 28%, rgba(0,0,0,0.28) 72%, #000 100%);
+}
+body.has-flow-bg,
+body.has-flow-bg header,
+body.has-flow-bg main section,
+body.has-flow-bg footer {
+  background: transparent !important;
+}
