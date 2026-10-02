@@ -362,3 +362,21 @@ body.has-flow-bg main section,
 body.has-flow-bg footer {
   background: transparent !important;
 }
+
+/* Two-column Service & Teaching block on the CV */
+.service-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 3rem;
+}
+@media (min-width: 768px) {
+  .service-cols { grid-template-columns: 1fr 1fr; }
+}
+
+.course-code {
+  display: inline-block;
+  min-width: 5.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
